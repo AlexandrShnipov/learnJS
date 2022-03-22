@@ -1,4 +1,4 @@
-'use strict'
+//'use strict'
 
 //! получение свойства объекта
 const man = {

@@ -41,11 +41,11 @@ var getResult2 = function getResult2(num) {
 
 getResult2(-1); //Сделайте функцию, которая параметрами принимает 3 числа и выводит на экран сумму этих чисел.
 
-var getSumm3 = function getSumm3(num1, num2) {
-  console.log('getSumm3 -->', num1 + num2);
+var getSumm3 = function getSumm3(num1, num2, num3) {
+  console.log('getSumm3 -->', num1 + num2 + num3);
 };
 
-getSumm3(3, 5); //Сделайте функцию func, которая параметром будет принимать 3 числа и выводить на экран их сумму. Пусть даны 3 переменные с числами:
+getSumm3(3, 5, 6); //Сделайте функцию func, которая параметром будет принимать 3 числа и выводить на экран их сумму. Пусть даны 3 переменные с числами:
 
 var getSumm4 = function getSumm4(num1, num2, num3) {
   console.log('getSumm4 -->', num1 + num2 + num3);
@@ -62,3 +62,17 @@ var getResult4 = function getResult4(num) {
 
 var result4 = getResult4(3);
 console.log('getResult4 -->', result4);
+
+var getResult5 = function getResult5(num) {
+  return num = Math.pow(num, 3);
+};
+
+var result5 = getResult5(3);
+console.log('getResult5 -->', result5); //Сделайте функцию, которая параметром принимает число, а возвращает квадратный корень из этого числа. С помощью этой функции найдите корень числа 3, затем найдите корень числа 4. Просуммируйте полученные результаты и выведите их на экран.
+
+var getResults6 = function getResults6(num) {
+  return Math.sqrt(num);
+};
+
+var getResults6Finish = getResults6(3) + getResults6(4);
+console.log('getResults6 -->', getResults6Finish);
