@@ -75,4 +75,71 @@ var getResults6 = function getResults6(num) {
 };
 
 var getResults6Finish = getResults6(3) + getResults6(4);
-console.log('getResults6 -->', getResults6Finish);
+console.log('getResults6 -->', getResults6Finish); //Пусть у вас есть функция, возвращающая квадратный корень из числа, и функция, округляющая дробь до трех знаков в дробной части:
+//С помощью этих функций найдите квадратный корень из числа 2 и округлите его до трех знаков в дробной части.
+
+var sqrt = function sqrt(num) {
+  return Math.sqrt(num);
+};
+
+var round = function round(num) {
+  return num.toFixed(3);
+};
+
+var result = round(sqrt(2));
+console.log('round(sqrt(2)) -->', result);
+console.log('sqrt(2)-->', sqrt(2)); //Пусть у вас есть функция, возвращающая квадратный корень из числа, и функция, возвращающая сумму трех чисел:
+//С помощью этих функций найдите сумму корней чисел 2, 3 и 4 и запишите ее в переменную result.
+
+var sqrt2 = function sqrt2(num) {
+  return Math.sqrt(num);
+};
+
+var sum = function sum(num1, num2, num3) {
+  return num1 + num2 + num3;
+};
+
+var result6 = sum(sqrt2(2), sqrt2(3), sqrt2(4));
+console.log('sum(sqrt2(2), sqrt2(3), sqrt2(4))-->', result6); //Пусть у вас есть функция, округляющая дробь до трех знаков в дробной части:
+//С помощью этой функции модифицируйте предыдущую задачу так, чтобы в переменную result записывалась дробь, округленная до 3-х знаков в дробной части.
+
+var round2 = function round2(num) {
+  return num.toFixed(3);
+};
+
+var result7 = round2(sum(sqrt2(2), sqrt2(3), sqrt2(4)));
+console.log('toFixed(3)-->', result7); //Напишите функцию, которая параметром будет принимать число и делить его на 2 столько раз, пока результат не станет меньше 10. Пусть функция возвращает количество итераций, которое потребовалось для достижения результата.
+
+var getRsult7 = function getRsult7(num) {
+  for (var _i = 1; num >= 10; _i++) {
+    if ((num /= 2) < 10) return _i;
+  } // let sum = num;
+  // let i = 1;
+  // let del = 2;
+  // while (true) {
+  //   sum /= del;
+  //   if (sum < 10) {
+  //     return i;
+  //   }
+  //   i++;
+  // }
+
+};
+
+console.log('getRsult7-->', getRsult7(10)); //Дана следующая функция: Перепишите ее в сокращенной форме согласно изученной теории.
+// function func(num1, num2) {
+// 	let result;
+// 		if (num1 > 0 && num2 > 0) {
+// 		result = num1 * num2;
+// 	} else {
+// 		result = num1 - num2;
+// 	}
+// 		return result;
+// }
+// alert(func(3, 4));
+
+var func = function func(num1, num2) {
+  if (num1 > 0 && num2 > 0) return num1 * num2;else return num1 - num2;
+};
+
+console.log('3*4 -->', func(3, 4));
