@@ -1358,3 +1358,14 @@
 // getArr(2);
 // const getArr = (a, b, c) => console.log([a, b, c]);
 // getArr(1, 2, 3);
+//Проверьте, что в этом массиве есть элемент 'c'. Если есть - выведите 'да', а если нет - выведите 'нет'.
+
+var arr = ['a', 'b', 'c', 'd', 'c'];
+var flag = false;
+
+for (var _i = 0, _arr = arr; _i < _arr.length; _i++) {
+  var elem = _arr[_i];
+  if (elem == 'c') flag = true;
+}
+
+if (flag == true) console.log('yes');else console.log('no');

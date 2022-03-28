@@ -142,4 +142,95 @@ var func = function func(num1, num2) {
   if (num1 > 0 && num2 > 0) return num1 * num2;else return num1 - num2;
 };
 
-console.log('3*4 -->', func(3, 4));
+console.log('3*4 -->', func(3, 4)); //Напишите функцию, которая будет находить сумму квадратов элементов массива.
+
+var summArr3 = function summArr3(arr) {
+  var summ3 = 0;
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = arr[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var elem = _step.value;
+      summ3 += Math.pow(elem, 2);
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+        _iterator["return"]();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  return summ3;
+};
+
+var arr3 = [1, 2, 3, 4];
+console.log('summArr3 -->', summArr3(arr3)); //Сделайте функцию getDigitsSum, которая параметром будет принимать целое число и возвращать сумму его цифр.
+
+var getDigitsSum = function getDigitsSum(num) {
+  var sum4 = 0;
+  var arr4 = Array.from(String(num), Number);
+
+  for (var _i2 = 0, _arr = arr4; _i2 < _arr.length; _i2++) {
+    var elem = _arr[_i2];
+    sum4 += elem;
+  }
+
+  return sum4;
+};
+
+var arr5 = 123;
+console.log(getDigitsSum(arr5)); //Реализуйте функцию getDivisors, которая параметром будет принимать число и возвращать массив его делителей, то есть чисел, на которое делится наше число.
+
+var getDivisors = function getDivisors(num) {
+  var arr1 = [];
+
+  for (var _i3 = 0; _i3 <= num; _i3++) {
+    if (num % _i3 == 0) arr1.push(_i3);
+  }
+
+  return arr1;
+};
+
+var LetgetDivisors = 24;
+console.log(getDivisors(LetgetDivisors)); //Сделайте функцию reverseStr, которая параметром будет принимать строку и переворачивать ее символы в обратном порядке. Решите задачу без цикла, используя комбинацию стандартных функций JavaScript.
+// const reverseStr = string => {
+//   const arr = string.split('');
+//   const arrReverse = arr.reverse();
+//   const resultArrReverse = arrReverse.join('');
+//   return resultArrReverse;
+// }
+
+var reverseStr = function reverseStr(string) {
+  return string.split('').reverse().join('');
+};
+
+var parametrReverseStr = 'sasha';
+console.log(reverseStr(parametrReverseStr)); //Сделайте функцию delElem, которая параметрами будет принимать значение и массив и удалять из массива все элементы с таким значением.
+//! удаляет только одно значение
+// const delElem = (elemArr, arr) => {
+//   i = arr.indexOf(elemArr);
+//   if(i >= 0) {
+//     arr.splice(i, 1);
+//   }
+//   return arr;
+// }
+// console.log(delElem(-4, [3, 5, -4, 6]));
+
+var delElem = function delElem(elemArr, arr) {
+  arr = arr.filter(function (n) {
+    return n != elemArr;
+  });
+  return arr;
+};
+
+console.log(delElem(4, [3, 5, 4, 6, 4]));

@@ -52,11 +52,11 @@ getSumm4(param1, param2, param3);
 //Сделайте функцию, которая параметром принимает число, а возвращает куб этого числа. С помощью этой функции найдите куб числа 3 и запишите его в переменную result.
 const getResult4 = num => num **= 3;
 const result4 = getResult4(3);
-console.log('getResult4 -->',result4);
+console.log('getResult4 -->', result4);
 
 const getResult5 = num => {
   return num **= 3;
-} 
+}
 const result5 = getResult5(3);
 console.log('getResult5 -->', result5);
 
@@ -86,16 +86,16 @@ console.log('sum(sqrt2(2), sqrt2(3), sqrt2(4))-->', result6)
 //Пусть у вас есть функция, округляющая дробь до трех знаков в дробной части:
 //С помощью этой функции модифицируйте предыдущую задачу так, чтобы в переменную result записывалась дробь, округленная до 3-х знаков в дробной части.
 const round2 = num => num.toFixed(3);
-const result7 =  round2(sum(sqrt2(2), sqrt2(3), sqrt2(4)));
+const result7 = round2(sum(sqrt2(2), sqrt2(3), sqrt2(4)));
 console.log('toFixed(3)-->', result7);
 
 //Напишите функцию, которая параметром будет принимать число и делить его на 2 столько раз, пока результат не станет меньше 10. Пусть функция возвращает количество итераций, которое потребовалось для достижения результата.
 const getRsult7 = num => {
-  for (let i = 1; num >= 10; i++ ) {
+  for (let i = 1; num >= 10; i++) {
     if ((num /= 2) < 10) return i;
   }
 
-    // let sum = num;
+  // let sum = num;
   // let i = 1;
   // let del = 2;
 
@@ -124,7 +124,70 @@ console.log('getRsult7-->', getRsult7(10));
 
 const func = (num1, num2) => {
 
-	if (num1 > 0 && num2 > 0) return num1 * num2;
-   else return num1 - num2;
+  if (num1 > 0 && num2 > 0) return num1 * num2;
+  else return num1 - num2;
 }
 console.log('3*4 -->', func(3, 4));
+
+//Напишите функцию, которая будет находить сумму квадратов элементов массива.
+
+const summArr3 = arr => {
+  let summ3 = 0;
+  for (let elem of arr) {
+    summ3 += elem ** 2;
+  }
+  return summ3;
+}
+
+let arr3 = [1, 2, 3, 4];
+console.log('summArr3 -->', summArr3(arr3));
+
+//Сделайте функцию getDigitsSum, которая параметром будет принимать целое число и возвращать сумму его цифр.
+const getDigitsSum = num => {
+  let sum4 = 0;
+  let arr4 = Array.from(String(num), Number);
+  for (let elem of arr4) sum4 += elem;
+  return sum4;
+}
+let arr5 = 123;
+console.log(getDigitsSum(arr5));
+
+//Реализуйте функцию getDivisors, которая параметром будет принимать число и возвращать массив его делителей, то есть чисел, на которое делится наше число.
+const getDivisors = num => {
+  let arr1 = []
+  for (let i = 0; i <= num; i++) if (num % i == 0) arr1.push(i);
+  return arr1;
+}
+let LetgetDivisors = 24;
+console.log(getDivisors(LetgetDivisors));
+
+//Сделайте функцию reverseStr, которая параметром будет принимать строку и переворачивать ее символы в обратном порядке. Решите задачу без цикла, используя комбинацию стандартных функций JavaScript.
+// const reverseStr = string => {
+//   const arr = string.split('');
+//   const arrReverse = arr.reverse();
+//   const resultArrReverse = arrReverse.join('');
+//   return resultArrReverse;
+// }
+
+const reverseStr = string => string.split('').reverse().join('');
+const parametrReverseStr = 'sasha';
+console.log(reverseStr(parametrReverseStr));
+
+//Сделайте функцию delElem, которая параметрами будет принимать значение и массив и удалять из массива все элементы с таким значением.
+//! удаляет только одно значение
+// const delElem = (elemArr, arr) => {
+//   i = arr.indexOf(elemArr);
+//   if(i >= 0) {
+//     arr.splice(i, 1);
+//   }
+//   return arr;
+// }
+// console.log(delElem(-4, [3, 5, -4, 6]));
+
+const delElem = (elemArr, arr) => {
+  arr = arr.filter((n) => { return n != elemArr })
+  return arr;
+}
+console.log(delElem(4, [3, 5, 4, 6, 4]));
+
+
