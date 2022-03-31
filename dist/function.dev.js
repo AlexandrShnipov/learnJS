@@ -233,4 +233,130 @@ var delElem = function delElem(elemArr, arr) {
   return arr;
 };
 
-console.log(delElem(4, [3, 5, 4, 6, 4]));
+console.log(delElem(4, [3, 5, 4, 6, 4])); //Сделайте функцию, заполняющую массив целыми числами от 1 до заданного. Пример работы такой функции
+// const getArr = (num4) => {
+//   let arr = [];
+//   for (let i = 0; i <= num4; i++){
+//     arr.push(i);
+//   }
+//   return arr;
+// }
+// let numberForGetArr = 8;
+// console.log(getArr(numberForGetArr));
+
+var text = document.querySelector('[data-text]');
+
+var getArr = function getArr(num4) {
+  var arr = [];
+
+  for (var _i4 = 0; _i4 <= num4; _i4++) {
+    arr.push(_i4);
+  }
+
+  return arr;
+};
+
+var numberForGetArr = 8;
+console.log(getArr(numberForGetArr));
+text.innerHTML = getArr(numberForGetArr); //Сделайте функцию, заполняющую массив целыми числами от начального до конечного заданных чисел. 
+
+var getArr2 = function getArr2(numStart, numFinish) {
+  var arr2 = [];
+
+  for (var _i5 = numStart; _i5 <= numFinish; _i5++) {
+    arr2.push(_i5);
+  }
+
+  return arr2;
+};
+
+var numStart = 3;
+var numFinish = 10;
+console.log(getArr2(numStart, numFinish)); // флаги в функции
+
+var getFlag = function getFlag(num) {
+  for (var _i6 = 2; _i6 < num; _i6++) {
+    if (num % _i6 === 0) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+console.log(getFlag(8)); //Сделайте функцию, которая параметром будет принимать массив с числами, и проверять, что все элементы в этом массиве являются четными числами.
+// const arrNumbers = arr => {
+//   for (let elem of arr) {
+//     if (elem %2 !== 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// console.log(arrNumbers([6, 4, 6, 8]));
+
+var arrNumbers = function arrNumbers(arr) {
+  var _iteratorNormalCompletion2 = true;
+  var _didIteratorError2 = false;
+  var _iteratorError2 = undefined;
+
+  try {
+    for (var _iterator2 = arr[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+      var elem = _step2.value;
+      if (elem % 2 !== 0) return false;
+    }
+  } catch (err) {
+    _didIteratorError2 = true;
+    _iteratorError2 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion2 && _iterator2["return"] != null) {
+        _iterator2["return"]();
+      }
+    } finally {
+      if (_didIteratorError2) {
+        throw _iteratorError2;
+      }
+    }
+  }
+
+  return true;
+};
+
+console.log(arrNumbers([1, 4, 6, 8])); //Сделайте функцию, которая параметром будет принимать число и проверять, что все цифры это числа являются нечетными
+// const arrNumbers2 = num => {
+//   let getArr4 = Array.from(String(num), Number);
+//   for (let elem of getArr4){
+//     if(elem %2 === 0){
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// console.log(arrNumbers2(778));
+
+var arrNumbers2 = function arrNumbers2(num) {
+  var getArr4 = Array.from(String(num), Number);
+
+  for (var _i7 = 0, _getArr = getArr4; _i7 < _getArr.length; _i7++) {
+    var elem = _getArr[_i7];
+    if (elem % 2 === 0) return false;
+  }
+
+  return true;
+};
+
+console.log(arrNumbers2(778)); //Сделайте функцию, которая параметром будет принимать массив и проверять, есть ли в этом массиве два одинаковых элемента подряд
+
+var getArr4 = function getArr4(arr6) {
+  for (var _i8 = 0; _i8 < arr6.length; _i8++) {
+    if (arr6[_i8] == arr6[_i8 + 1]) {
+      return true + ' ' + 'arr[i] повторяется';
+    }
+  }
+
+  return false + ' ' + 'arr[i] не повторяется';
+  ;
+};
+
+console.log(getArr4([1, 5, 9, 6, 8]));

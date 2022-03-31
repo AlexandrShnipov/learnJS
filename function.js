@@ -190,4 +190,93 @@ const delElem = (elemArr, arr) => {
 }
 console.log(delElem(4, [3, 5, 4, 6, 4]));
 
+//Сделайте функцию, заполняющую массив целыми числами от 1 до заданного. Пример работы такой функции
+// const getArr = (num4) => {
+//   let arr = [];
+//   for (let i = 0; i <= num4; i++){
+//     arr.push(i);
+//   }
+//   return arr;
+// }
+// let numberForGetArr = 8;
+// console.log(getArr(numberForGetArr));
 
+let text = document.querySelector('[data-text]');
+const getArr = num4 => {
+  let arr = [];
+  for (let i = 0; i <= num4; i++) arr.push(i);
+  return arr;
+}
+let numberForGetArr = 8;
+console.log(getArr(numberForGetArr));
+text.innerHTML = getArr(numberForGetArr);
+
+//Сделайте функцию, заполняющую массив целыми числами от начального до конечного заданных чисел. 
+const getArr2 = (numStart, numFinish) => {
+  let arr2 = [];
+  for (let i = numStart; i <= numFinish; i++) {
+    arr2.push(i);
+  }
+  return arr2;
+}
+let numStart = 3;
+let numFinish = 10;
+console.log(getArr2(numStart, numFinish));
+
+// флаги в функции
+const getFlag = num => {
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+console.log(getFlag(8));
+
+//Сделайте функцию, которая параметром будет принимать массив с числами, и проверять, что все элементы в этом массиве являются четными числами.
+// const arrNumbers = arr => {
+//   for (let elem of arr) {
+//     if (elem %2 !== 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// console.log(arrNumbers([6, 4, 6, 8]));
+
+const arrNumbers = arr => {
+  for (let elem of arr) if (elem % 2 !== 0) return false;
+  return true;
+}
+console.log(arrNumbers([1, 4, 6, 8]));
+
+//Сделайте функцию, которая параметром будет принимать число и проверять, что все цифры это числа являются нечетными
+// const arrNumbers2 = num => {
+//   let getArr4 = Array.from(String(num), Number);
+//   for (let elem of getArr4){
+//     if(elem %2 === 0){
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// console.log(arrNumbers2(778));
+
+const arrNumbers2 = num => {
+  let getArr4 = Array.from(String(num), Number);
+  for (let elem of getArr4) if (elem % 2 === 0) return false;
+  return true;
+}
+console.log(arrNumbers2(778));
+
+//Сделайте функцию, которая параметром будет принимать массив и проверять, есть ли в этом массиве два одинаковых элемента подряд
+const getArr4 = arr6 => {
+  for (let i = 0; i < arr6.length; i++){
+    if (arr6[i] == arr6[i+1]){
+      return true  + ' ' + 'arr[i] повторяется';
+    }
+  }
+  return false  + ' ' + 'arr[i] не повторяется';;
+}
+console.log(getArr4([1, 5, 9, 6, 8]));
