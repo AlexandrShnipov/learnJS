@@ -347,6 +347,15 @@ var arrNumbers2 = function arrNumbers2(num) {
 };
 
 console.log(arrNumbers2(778)); //Сделайте функцию, которая параметром будет принимать массив и проверять, есть ли в этом массиве два одинаковых элемента подряд
+// const getArr4 = arr6 => {
+//   for (let i = 0; i < arr6.length; i++){
+//     if (arr6[i] == arr6[i+1]){
+//       return true  + ' ' + 'arr[i] повторяется';
+//     }
+//   }
+//   return false  + ' ' + 'arr[i] не повторяется';;
+// }
+// console.log(getArr4([1, 5, 9, 6, 8]));
 
 var getArr4 = function getArr4(arr6) {
   for (var _i8 = 0; _i8 < arr6.length; _i8++) {
@@ -359,4 +368,127 @@ var getArr4 = function getArr4(arr6) {
   ;
 };
 
-console.log(getArr4([1, 5, 9, 6, 8]));
+console.log(getArr4([1, 5, 9, 6, 8])); //Логические операторы без if в функциях JavaScript
+
+var num5 = function num5(a, b) {
+  return a > b;
+};
+
+console.log('a > b -->', num5(5, 4)); //Перепишите ее код в сокращенной форме согласно изученной теории.
+// function func(a, b) {
+// 	if (a == b) {
+// 		return true;
+// 	} else {
+// 		return false;
+// 	}
+// }
+
+var func4 = function func4(a, b) {
+  return a == b;
+};
+
+console.log('a == b -->', func4(2, 2)); //Перепишите ее код в сокращенной форме согласно изученной теории.
+// function func(a, b) {
+// 	if (a + b >= 10) {
+// 		return true;
+// 	} else {
+// 		return false;
+// 	}
+// }
+
+var func5 = function func5(a, b) {
+  return a + b >= 10;
+};
+
+console.log('a + b >= 10 -->', func5(2, 5)); //Перепишите ее код в сокращенной форме согласно изученной теории.
+// function func(num) {
+// 	if (num >= 0) {
+// 		return true;
+// 	} else {
+// 		return false;
+// 	}
+// }
+
+var func6 = function func6(num) {
+  return num >= 0;
+};
+
+console.log('num >= 0 -->', func6(-8)); //!Поиск ошибок в коде с функциями JavaScript
+//Код должен найти сумму результатов работы двух функций
+
+function func1() {
+  console.log(3);
+  return 3; //+
+}
+
+function func2() {
+  console.log(5);
+  return 5; //+
+}
+
+console.log(func1() + func2()); //Код должен найти сумму элементов массива:
+
+function sum5(arr) {
+  var res = 0;
+  var _iteratorNormalCompletion3 = true;
+  var _didIteratorError3 = false;
+  var _iteratorError3 = undefined;
+
+  try {
+    for (var _iterator3 = arr[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+      var elem = _step3.value;
+      res += elem; //return res; // mistake
+    }
+  } catch (err) {
+    _didIteratorError3 = true;
+    _iteratorError3 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion3 && _iterator3["return"] != null) {
+        _iterator3["return"]();
+      }
+    } finally {
+      if (_didIteratorError3) {
+        throw _iteratorError3;
+      }
+    }
+  }
+
+  return res; // +
+}
+
+console.log(sum5([1, 2, 3, 4, 5])); //Код должен найти сумму элементов массива, однако, ничего не выводит на экран:
+
+var arr10 = [1, 2, 3, 4, 5];
+
+function func10(arr10) {
+  var res = 0;
+  var _iteratorNormalCompletion4 = true;
+  var _didIteratorError4 = false;
+  var _iteratorError4 = undefined;
+
+  try {
+    for (var _iterator4 = arr10[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+      var elem = _step4.value;
+      res += elem;
+    }
+  } catch (err) {
+    _didIteratorError4 = true;
+    _iteratorError4 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion4 && _iterator4["return"] != null) {
+        _iterator4["return"]();
+      }
+    } finally {
+      if (_didIteratorError4) {
+        throw _iteratorError4;
+      }
+    }
+  }
+
+  return res; //+
+}
+
+console.log(func10(arr10)); //+
+//

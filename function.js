@@ -271,12 +271,198 @@ const arrNumbers2 = num => {
 console.log(arrNumbers2(778));
 
 //Сделайте функцию, которая параметром будет принимать массив и проверять, есть ли в этом массиве два одинаковых элемента подряд
+// const getArr4 = arr6 => {
+//   for (let i = 0; i < arr6.length; i++){
+//     if (arr6[i] == arr6[i+1]){
+//       return true  + ' ' + 'arr[i] повторяется';
+//     }
+//   }
+//   return false  + ' ' + 'arr[i] не повторяется';;
+// }
+// console.log(getArr4([1, 5, 9, 6, 8]));
+
 const getArr4 = arr6 => {
-  for (let i = 0; i < arr6.length; i++){
-    if (arr6[i] == arr6[i+1]){
-      return true  + ' ' + 'arr[i] повторяется';
+  for (let i = 0; i < arr6.length; i++) {
+    if (arr6[i] == arr6[i + 1]) {
+      return true + ' ' + 'arr[i] повторяется';
     }
   }
-  return false  + ' ' + 'arr[i] не повторяется';;
+  return false + ' ' + 'arr[i] не повторяется';;
 }
 console.log(getArr4([1, 5, 9, 6, 8]));
+
+//Логические операторы без if в функциях JavaScript
+const num5 = (a, b) => a > b;
+console.log('a > b -->', num5(5, 4));
+
+//Перепишите ее код в сокращенной форме согласно изученной теории.
+// function func(a, b) {
+// 	if (a == b) {
+// 		return true;
+// 	} else {
+// 		return false;
+// 	}
+// }
+
+const func4 = (a, b) => a == b;
+console.log('a == b -->', func4(2, 2));
+
+//Перепишите ее код в сокращенной форме согласно изученной теории.
+// function func(a, b) {
+// 	if (a + b >= 10) {
+// 		return true;
+// 	} else {
+// 		return false;
+// 	}
+// }
+
+const func5 = (a, b) => a + b >= 10;
+console.log('a + b >= 10 -->', func5(2, 5));
+
+//Перепишите ее код в сокращенной форме согласно изученной теории.
+// function func(num) {
+// 	if (num >= 0) {
+// 		return true;
+// 	} else {
+// 		return false;
+// 	}
+// }
+
+const func6 = num => num >= 0;
+console.log('num >= 0 -->', func6(-8));
+
+//!Поиск ошибок в коде с функциями JavaScript
+//Код должен найти сумму результатов работы двух функций
+function func1() {
+  console.log(3);
+  return 3; //+
+}
+function func2() {
+  console.log(5);
+  return 5; //+
+}
+console.log(func1() + func2());
+
+//Код должен найти сумму элементов массива:
+function sum5(arr) {
+	let res = 0;
+	
+	for (let elem of arr) {
+		res += elem;
+    //return res; // mistake
+	}
+  	return res; // +
+}
+console.log(sum5([1, 2, 3, 4, 5]));
+
+//Код должен найти сумму элементов массива, однако, ничего не выводит на экран:
+let arr10 = [1, 2, 3, 4, 5];
+
+function func10(arr10) {
+	let res = 0;
+	
+	for (let elem of arr10) {
+		res += elem;
+	}	
+	return res; //+
+}
+console.log(func10(arr10)); //+
+
+//Код должен найти сумму результатов работы двух функций:
+
+function func1() {
+	return 3;
+}
+function func2() {
+	return 5;
+}
+
+console.log( func1() + func2() ); //added ();
+
+//Код должен найти сумму элементов массива:
+// let sum = sum([1, 2, 3, 4, 5]);
+// alert(sum);
+// function sum(arr) {
+// 	let sum = 0;
+	// 	for (let elem of arr) {
+// 		sum += elem;
+// 	}
+	// 	return elem;
+// }
+
+let sum6 = [1, 2, 3, 4, 5];
+
+function sum7(num) {
+	let sum = 0;
+		for (let elem of num) {
+		sum += elem;
+	}
+		return sum;
+}
+console.log(sum7(sum6));
+
+//Код должен найти сумму элементов массива:
+// let res = sum([1, 2, 3, 4, 5]);
+// alert(res);
+// function sum(arr) {
+// 	let sum = 0;
+	// 	for (let elem of arr) {
+// 		sum += elem;
+// 	}
+// }
+
+let res = [1, 2, 3, 4, 5];
+//alert(res);
+
+function sum8(res) {
+	let sum = 0;
+	
+	for (let elem of res) {
+		sum += elem;
+	}
+  return sum;
+}
+console.log(sum8(res));
+
+//Функция добавляет ноль к числу от 1 до 9, а числа больше 9 возвращает без изменений:
+// function add(num) {
+// 	if (num <= 9) {
+// 		return '0' + num;
+// 	}
+// }
+
+function add(num) {
+	if (num <= 9) {
+		return '0' + num;
+	} else {
+    return num;
+  }
+}
+console.log(add(8));
+
+//Код должен найти сумму элементов массива:
+// let arr = [1, 2, 3, 4, 5];
+// let sum = sum(arr);
+// console.log(sum);
+// function sum(arr) {
+// 	let res = 0;
+// 		for (let elem of arr) {
+// 		res += elem;
+// 	}
+// 		return res;
+// }
+
+let arr = [1, 2, 3, 4, 5];
+//console.log(sum10);
+
+function sum11(arr) {
+	let res = 0;
+	
+	for (let elem of arr) {
+		res += elem;
+	}	
+	return res;
+}
+console.log(sum11(arr));
+
+
