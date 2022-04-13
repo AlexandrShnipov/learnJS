@@ -413,82 +413,14 @@ var func6 = function func6(num) {
   return num >= 0;
 };
 
-console.log('num >= 0 -->', func6(-8)); //!Поиск ошибок в коде с функциями JavaScript
-//Код должен найти сумму результатов работы двух функций
+console.log('num >= 0 -->', func6(-8)); //button
 
-function func1() {
-  console.log(3);
-  return 3; //+
-}
+var buttonClick = document.querySelector('[data-button]');
+var addText = document.querySelector('[data-addText]');
 
-function func2() {
-  console.log(5);
-  return 5; //+
-}
+var addTextClick = function addTextClick() {
+  addText.innerHTML = 'Hello Word!';
+  addText.style.color = 'red';
+};
 
-console.log(func1() + func2()); //Код должен найти сумму элементов массива:
-
-function sum5(arr) {
-  var res = 0;
-  var _iteratorNormalCompletion3 = true;
-  var _didIteratorError3 = false;
-  var _iteratorError3 = undefined;
-
-  try {
-    for (var _iterator3 = arr[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-      var elem = _step3.value;
-      res += elem; //return res; // mistake
-    }
-  } catch (err) {
-    _didIteratorError3 = true;
-    _iteratorError3 = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion3 && _iterator3["return"] != null) {
-        _iterator3["return"]();
-      }
-    } finally {
-      if (_didIteratorError3) {
-        throw _iteratorError3;
-      }
-    }
-  }
-
-  return res; // +
-}
-
-console.log(sum5([1, 2, 3, 4, 5])); //Код должен найти сумму элементов массива, однако, ничего не выводит на экран:
-
-var arr10 = [1, 2, 3, 4, 5];
-
-function func10(arr10) {
-  var res = 0;
-  var _iteratorNormalCompletion4 = true;
-  var _didIteratorError4 = false;
-  var _iteratorError4 = undefined;
-
-  try {
-    for (var _iterator4 = arr10[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-      var elem = _step4.value;
-      res += elem;
-    }
-  } catch (err) {
-    _didIteratorError4 = true;
-    _iteratorError4 = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion4 && _iterator4["return"] != null) {
-        _iterator4["return"]();
-      }
-    } finally {
-      if (_didIteratorError4) {
-        throw _iteratorError4;
-      }
-    }
-  }
-
-  return res; //+
-}
-
-console.log(func10(arr10)); //+
-//
+buttonClick.addEventListener('click', addTextClick);
